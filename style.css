@@ -1,392 +1,314 @@
-/* General reset and box-sizing for consistency */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Body styling */
-body {
     font-family: Arial, sans-serif;
+}
+
+body {
     line-height: 1.6;
-    background-color: #fff3e0; 
+    background-color: #f4f4f4;
     color: #333;
-    padding-top: 60px;
-    overflow-x: hidden;
 }
 
-/* Header styling */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Header Styles */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100vw; 
-    z-index: 1000; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-}
-
-/* Navigation styling */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Logo styling */
-.logo a {
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-}
-
-.logo-img {
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    margin-right: 10px; 
-    vertical-align: middle; 
-}
-
-
-/* Menu link styling */
-.menu a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 16px;
-}
-
-.menu a:hover {
-    text-decoration: underline;
-}
-
-/* Main content styling */
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
+    background: #2e86c1;
     padding: 20px;
 }
 
-.content {
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.menu a {
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.menu a:hover {
+    transform: scale(1.1);
+    color: #ffd700;
+}
+
+.logout-container {
+    margin-left: auto;
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Main Section */
+.main {
     text-align: center;
-    margin-right: 20px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .content h1 {
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.content h2 {
-    font-size: 23px;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #2980b9;
 }
 
 .content p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    margin-top: 20px;
 }
 
-/* Form container styling */
+/* Form Styles */
 .form-container {
-    max-width: 380px;
-    width: 100%;
-}
-
-.login-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .login-form h2 {
+    color: #2980b9;
     margin-bottom: 20px;
-}
-
-.login-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
 }
 
 .login-form input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .btn {
     width: 100%;
     padding: 10px;
-    background: #333;
-    color: #fff;
+    background-color: #2980b9;
+    color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background: #555;
+    background-color: #1f618d;
 }
 
-.link {
-    margin-top: 10px;
-}
-
-.link a {
-    color: #333;
-    text-decoration: none;
-}
-
-.link a:hover {
-    text-decoration: underline;
-}
-
-.logout-btn {
-    width: 100%;
-    padding: 10px;
-    background: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.logout-btn:hover {
-    background: #c0392b;
-}
-
-/* Container for documents section */
+/* Document Section */
 .container {
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff3e0;
+    max-width: 1200px;
 }
 
-/* Heading styling */
 .heading {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #333;
+    margin-bottom: 30px;
+    color: #2980b9;
 }
 
-/* Box container styling */
 .box-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; 
     justify-content: center;
+    gap: 20px;
 }
 
-/* Individual box styling */
 .box {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px; 
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     text-align: center;
-    padding: 15px;
+    transition: transform 0.3s ease;
 }
 
-/* Image styling */
 .box img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+    width: 100px;
     margin-bottom: 10px;
-    border-radius: 8px;
 }
 
-
-/* Title styling */
 .box h3 {
-    margin: 10px 0 5px;
-    font-size: 1.25em;
-    color: #333;
+    margin: 10px 0;
+    color: #2980b9;
 }
 
-/* Description styling */
 .box p {
-    margin: 0;
-    color: #666;
-    font-size: 0.875em;
+    font-size: 1rem;
 }
 
-/* Button styling */
 .box-btn {
-    margin-top: 15px;
     padding: 10px 20px;
-    background-color: #e74c3c;
+    background-color: #27ae60;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
 }
 
 .box-btn:hover {
-    background-color: #141617;
+    background-color: #229954;
 }
 
-.container .box-container .box:hover {
-    box-shadow: 0 10px 15px rgba(0,0,0,.3);
-    transform: scale(1.03);
-}
-
-/* Container for the upload section */
+/* Upload Section */
 .upload-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Title of the upload section */
-.upload-container h2 {
-    margin-top: 0;
-    font-size: 24px;
-    color: #333;
-}
-
-/* Introduction paragraph */
-.upload-container p {
-    font-size: 16px;
-    color: #555;
-}
-
-/* List of steps for the upload process */
-.upload-steps {
-    margin-bottom: 20px;
-    padding-left: 20px;
-    font-size: 16px;
-    color: #333;
-}
-
-.upload-steps li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-/* Face lock container styling */
-.face-lock-container {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: white;
+    padding: 40px;
+    margin: 20px auto;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.face-lock-container h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+.upload-steps {
+    text-align: left;
+    display: inline-block;
 }
 
-.face-lock-container p {
-    margin: 10px 0;
+.face-lock-container {
+    margin-top: 30px;
 }
 
 .face-recognition-image {
-    width: 100%;
-    max-width: 300px; /* Adjust as needed */
-    height: auto;
-    margin: 20px 0;
+    width: 150px;
 }
 
-.face-lock-container .btn {
-    margin-top: 10px;
-    padding: 10px 10px;
-    background-color: #e74c3c;
+#start-recognition {
+    background-color: #2980b9;
     color: white;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.face-lock-container .btn:hover {
-    background-color: #333;
+#start-recognition:hover {
+    background-color: #1f618d;
 }
 
-.face-lock-container #face-status {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #0b0a09; /* Red for error messages */
-}
-
-/* Footer styling */
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #2e86c1;
+    padding: 20px;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
-.footer-left, .footer-right {
-    flex: 1;
-}
-
-.footer-center {
-    flex: 2;
-}
-
-.footer-text, .footer-contact {
+.footer-text,
+.footer-contact {
     margin-bottom: 20px;
 }
 
-.footer-text p, .footer-contact p {
-    margin: 10px 0;
-    font-size: 0.875em;
+.footer-left p,
+.footer-right p {
+    color: white;
 }
 
-.footer-text a, .footer-contact a {
-    color: #ddd;
-    text-decoration: none;
+.footer-right a {
+    color: white;
+    transition: color 0.3s ease;
 }
 
-.footer-text a:hover, .footer-contact a:hover {
-    text-decoration: underline;
+.footer-right a:hover {
+    color: #ffd700;
 }
 
-.footer-contact h3, .footer-text h3 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    color: #e74c3c; /* Change this to the color you prefer */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .upload-container,
+    .form-container {
+        width: 90%;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
+@media (max-width: 480px) {
+    .logo-img {
+        width: 40px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .box {
+        width: 90%;
+    }
+}
